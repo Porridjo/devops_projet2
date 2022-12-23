@@ -13,4 +13,8 @@ describe('utils library test suite', () => {
     it('should return true if contains "-"', () => {
         expect(checkName('EXOPLANET-')).toBe(true)
     })
+    it('should return true if contains "."', () => {
+      expect(checkName('EXOPLANET.')).toBe(true)
+  })
+  
 })
