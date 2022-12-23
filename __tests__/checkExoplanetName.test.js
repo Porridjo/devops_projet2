@@ -14,7 +14,9 @@ describe('utils library test suite', () => {
         expect(checkName('EXOPLANET-')).toBe(true)
     })
     it('should return true if contains "."', () => {
-      expect(checkName('EXOPLANET.')).toBe(true)
-  })
-  
+        expect(checkName('EXOPLANET.')).toBe(true)
+    })
+    it('should return false if contains unauthorized characters', () => {
+        expect(checkName('Trappiste$****01****-00')).toBe(false)
+    })
 })
