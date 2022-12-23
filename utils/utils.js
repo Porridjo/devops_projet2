@@ -1,3 +1,13 @@
 module.exports.checkName = (exoplanetName) => {
-    return false
+    if (exoplanetName === undefined || exoplanetName === '') {
+        return false
+    }
+    const regex = /^[A-Z]+$/
+    const matchFound = exoplanetName.match(regex)
+
+    if (matchFound === null || matchFound.length === 0) {
+        return false
+    } else {
+        return true
+    }
 }
